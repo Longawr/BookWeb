@@ -1,0 +1,7 @@
+mixin bookCard(book)
+    .card
+        img.card-img-top(src= book.image alt= book.name)
+        .card-body
+            a(href='#')
+                h5.card-title #{ book.name }
+            p.card-text #{ book.price.toLocaleString() }

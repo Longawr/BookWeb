@@ -1,8 +1,12 @@
 extends layouts/mainLayout.pug
 
+include ./blocks/mixins
+
 block vars 
     -title = 'Home Page'
 
 block content
 
-    h1= title
+    .col-sm-6.col-lg-4
+        each book in books
+            +bookCard(book)
